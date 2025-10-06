@@ -170,7 +170,7 @@ public class ReferralSystem {
       if (args.length > 2) buffer = msCast.object.get(args[2]);
       switch (command) {
         case "commit":
-          // microsot commit JOB_ID RESUME_PATH
+          // java ReferralSystem microsot commit JOB_ID RESUME_PATH
           Monitor mntr = null;
           if (buffer == null) mntr = new Monitor(
             new Value(args[3], null),
@@ -195,11 +195,11 @@ public class ReferralSystem {
           );
           break;
         case "view":
-          // microsot view JOB_ID
+          // java ReferralSystem microsot view JOB_ID
           System.out.println(((Microsoft) ms).object.get(args[2]));
           break;
         case "admit-ref":
-          // microsot admit-ref JOB_ID NAME
+          // java ReferralSystem microsot admit-ref JOB_ID NAME
           if (buffer != null) {
             Value referrals = buffer.getReferralRequestsSentTo();
             if (referrals == null) {
@@ -225,7 +225,7 @@ public class ReferralSystem {
           }
           break;
         case "evict-ref":
-          // microsot evict-ref JOB_ID NAME
+          // java ReferralSystem microsot evict-ref JOB_ID NAME
           if (buffer != null) {
             Value referrals = buffer.getReferralRequestsSentTo();
             if (referrals == null) {
@@ -251,7 +251,7 @@ public class ReferralSystem {
           }
           break;
         case "edit-status":
-          // microsot edit-status JOB_ID referred
+          // java ReferralSystem microsot edit-status JOB_ID referred
           if (buffer != null) {
             Value referrals = buffer.getStatusObject();
             if (referrals == null) {
